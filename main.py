@@ -66,12 +66,18 @@ class Zoo:
         try:
             with open(filename, "r", encoding="utf-8") as file:
                 zoo_state = json.load(file)
-                for animal in zoo_state["animals"]:
-                    animal_type = globals()[animal["type"]]
-                    self.add_animal(animal_type(animal["name"], animal["age"]))
-                for employee in zoo_state["employees"]:
-                    employee_type = globals()[employee["role"]]
-                    self.add_employee(employee_type(employee["name"], employee["age"]))
+                for animal_info in zoo_state["animals"]:
+                    animal_type = globals()[animal_info["type"]]
+                    animal = animal_type(animal_info["name"], animal_info["age"])
+                    self.add_animal(animal)
+
+                for employee_info in zoo_state["employees"]:
+                    employee_type = globals()[employee_info["role"]]
+                    employee = employee_type(
+                        employee_info["name"], employee_info["age"]
+                    )
+                    self.add_employee(employee)
+
         except FileNotFoundError:
             pass
 
