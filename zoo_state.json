@@ -1,0 +1,36 @@
+{
+    "animals": [
+        {
+            "name": "Петух",
+            "age": 3,
+            "type": "Bird"
+        },
+        {
+            "name": "Кошка",
+            "age": 2,
+            "type": "Mammal"
+        },
+        {
+            "name": "Змея",
+            "age": 1,
+            "type": "Reptile"
+        }
+    ],
+    "employees": [
+        {
+            "name": "Вася",
+            "age": 25,
+            "role": "Veterinarian"
+        },
+        {
+            "name": "Петя",
+            "age": 30,
+            "role": "ZooKeeper"
+        },
+        {
+            "name": "Коля",
+            "age": 25,
+            "role": "ZooKeeper"
+        }
+    ]
+}
